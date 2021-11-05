@@ -1,0 +1,22 @@
+.card-change {
+    background-color: #e6e4e4;
+    border: 1px solid #6b6b6b;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 12px 10px;
+}
+
+.grid-item h4 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 17px;
+}
+
+.grid-item span {
+    font-size: 14px;
+}
+
+.mm-popup__box__footer {
+    overflow: hidden;
+    padding: 20px 20px 10px;
+}

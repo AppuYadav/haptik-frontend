@@ -1,0 +1,9 @@
+.App-Main {
+  background-color: #DAE0E6;
+  height: 100vh;
+}
+
+.App {
+    max-width: 760px;
+    margin: auto;
+}

@@ -10,7 +10,7 @@ const FriendContextProvider = (props) => {
     const [original, setOriginal] = useState([]);
     const [friends, setFriends] = useState(original);
     const [searchText, setSearchText] = useState('');
-    const [currentPage, setCurrentPage] = useState(1);ss
+    const [currentPage, setCurrentPage] = useState(1);
     const [loader, setLoader] = useState(true);
 
     useEffect(() => {

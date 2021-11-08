@@ -29,6 +29,11 @@
     "jest:watch": "jest --watchAll",
     "jest:coverage": "jest --collect-coverage"
   },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -50,6 +55,9 @@
   "devDependencies": {
     "@types/jest": "^27.0.2",
     "autoprefixer": "^9.8.8",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
     "jest": "^26.6.0",
     "postcss": "^7.0.39",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",

@@ -1,6 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import FriendList from '../FriendList';
 import { FriendContext } from '../../../contexts/FriendContext';
+import { } from ''
+
+jest.mock("./api/posts");
+
+// ensure you're resetting modules before each test
+beforeEach(() => {
+    jest.resetModules();
+});
 
 function renderComponent() {
     render(

@@ -11,6 +11,7 @@ const FriendContextProvider = (props) => {
     const [friends, setFriends] = useState(original);
     const [searchText, setSearchText] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
+    const [loader, setLoader] = useState(true);
 
     useEffect(() => {
         let mounted = true;
@@ -20,6 +21,7 @@ const FriendContextProvider = (props) => {
             if (mounted) {
                 setOriginal(response.data.lists);
                 setFriends(response.data.lists);
+                setLoader(false);
             }
           });
         };
@@ -100,7 +102,7 @@ const FriendContextProvider = (props) => {
     }
 
     return (
-        <FriendContext.Provider value={{ original, friends, createFriend, removeFriend, favoriteFriend, searchFriend, currentPage, setCurrentPage }}>
+        <FriendContext.Provider value={{ original, friends, loader, createFriend, removeFriend, favoriteFriend, searchFriend, currentPage, setCurrentPage }}>
             {props.children}
         </FriendContext.Provider>
     );

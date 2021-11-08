@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App-Main">
       <FriendContextProvider>
-        <Toolbar />
+        <Toolbar title="Friends List"/>
         <div className="App">
           <FriendList />
         </div>

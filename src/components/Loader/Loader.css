@@ -1,0 +1,11 @@
+.loader {
+    margin-top: 12px;
+}
+
+.loader-text {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+}

@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import PropTypes from 'prop-types';
 import './Toolbar.css';
 import { AddSquare } from 'iconsax-react';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,7 +14,7 @@ import Row from 'react-bootstrap/Row';
 import { FriendContext } from '../../contexts/FriendContext';
 import Popup from 'react-popup';
 
-const Toolbar = () => {
+const Toolbar = ({ title }) => {
     const [show, setShow] = useState(false);
     const [validated, setValidated] = useState(false);
     const { original, createFriend } = useContext(FriendContext);
@@ -37,7 +38,7 @@ const Toolbar = () => {
 
     return <React.Fragment>
             <div className="header">
-                <span className="header-text">Friends List</span>
+                <span className="header-text">{title}</span>
                 <div className="flex-grow"></div>
                 <div className="header-logo">
                     <AddSquare color="#eee" variant="Linear" size={28} onClick={() => setShow(true)}/>
@@ -71,6 +72,8 @@ const Toolbar = () => {
         </React.Fragment>
 }
 
-Toolbar.propTypes = {};
+Toolbar.propTypes = {
+    title: PropTypes.string.isRequired
+};
 
 export default Toolbar;
